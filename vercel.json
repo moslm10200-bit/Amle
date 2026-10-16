@@ -1,0 +1,8 @@
+{
+  "outputDirectory": "public",
+  "functions": {"api/**/*.js": {"includeFiles": "{store-template/**,public/designs/**,public/sakb-design.js}", "maxDuration": 60}},
+  "headers": [
+    {"source": "/admin(.*)", "headers": [{"key":"X-Frame-Options","value":"DENY"},{"key":"X-Robots-Tag","value":"noindex"},{"key":"Cache-Control","value":"no-store"}]},
+    {"source": "/api/(.*)", "headers": [{"key":"Cache-Control","value":"no-store"}]}
+  ]
+}

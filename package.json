@@ -1,0 +1,10 @@
+{
+  "name": "sakb",
+  "version": "1.0.0",
+  "private": true,
+  "description": "السكب — منصة إنشاء المتاجر (الموقع + لوحة الإدارة + الخادم)",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=18" },
+  "dependencies": { "firebase-admin": "^12.7.0" }
+}

@@ -1,0 +1,9 @@
+<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>إدارة السكب</title>
+<link rel="stylesheet" href="admin.css"></head><body>
+<div id="lg" class="box" style="margin-top:12vh"><h1>🔐 دخول الإدارة</h1><input id="u" placeholder="البريد الإلكتروني أو اسم المستخدم" autocomplete="username"><input id="p" type="password" placeholder="كلمة المرور" autocomplete="current-password"><p class="err" id="e"></p><button id="go" style="width:100%">دخول</button></div>
+<div id="ap" hidden><div class="bar"><h1 class="grow">طلبات السكب</h1><button class="x" id="rf">تحديث</button><button class="x" id="lo">خروج</button></div><div class="bar" id="fl"></div><div id="ls"></div></div>
+<div id="md"><div class="box"><h1 id="mt">رسالة للعميل</h1><div id="tp"></div><textarea id="tx" rows="4" maxlength="500" placeholder="اكتب أي رسالة للعميل... ستظهر له في قائمة الإعدادات ☰"></textarea><p class="err" id="me"></p><div class="bar"><button id="sd" class="grow">إرسال</button><button class="x" id="sv">حفظ كقالب</button><button class="x" id="cn">إلغاء</button></div></div></div>
+<script src="admin.js"></script>
+<!-- ربط التوكن بالـAPI (في آخر الصفحة): -->
+<script src="auth.js"></script>
+</body></html>

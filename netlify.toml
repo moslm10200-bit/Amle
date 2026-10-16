@@ -1,0 +1,28 @@
+# إعداد نتلفاي: الموقع من public، والدوال من netlify/functions (تستدعي نفس كود api/)
+[build]
+  publish = "public"
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
+  external_node_modules = ["firebase-admin"]
+  included_files = ["store-template/**", "public/designs/**", "public/sakb-design.js"]
+
+[[redirects]]
+  from = "/api/orders"
+  to = "/.netlify/functions/orders"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/admin"
+  to = "/.netlify/functions/admin"
+  status = 200
+  force = true
+
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Robots-Tag = "noindex"
+    Cache-Control = "no-store"
